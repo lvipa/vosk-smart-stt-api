@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# Local config
+.env
+
+# Audio files
+*.wav
+*.mp3
+*.ogg
+*.m4a
+*.webm
+*.flac
+
+# Models
+models/
+*.pt
+*.pth
+*.bin
+checkpoint
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -5,7 +5,7 @@ An offline speech-to-text HTTP API built with FastAPI, Vosk and ffmpeg. It accep
 ## What it does
 
 - accepts `mp3`, `ogg`, `m4a`, `webm`, `wav` and other formats supported by ffmpeg;
-- supports Russian and English Vosk models, with model selection per request;
+- supports Russian, English, French and Kazakh Vosk models, with model selection per request;
 - returns word timestamps and confidence values when requested;
 - optionally restores casing and punctuation;
 - caches loaded models and reports processing metrics such as RTF, xRT and CPU usage;
@@ -32,7 +32,11 @@ models/
 ├── vosk-model-small-ru-0.22/
 ├── vosk-model-ru-0.42/
 ├── vosk-model-small-en-us-0.15/
-└── vosk-model-en-us-0.22/
+├── vosk-model-en-us-0.22/
+├── vosk-model-small-fr-0.22/
+├── vosk-model-fr-0.22/
+├── vosk-model-small-kz-0.42/
+└── vosk-model-kz-0.42/
 ```
 
 Start the service:
@@ -69,7 +73,7 @@ curl -X POST "http://localhost:8000/stt?lang=ru&model=small&words=true&punc=fals
 | Parameter | Values | Description |
 | --- | --- | --- |
 | `file` | audio file | Multipart upload. |
-| `lang` | `ru`, `en` | Recognition language. |
+| `lang` | `ru`, `en`, `fr`, `kz` | Recognition language. Punctuation recovery is currently available for Russian and English only. |
 | `model` | `small`, `big`, … | Model variant to use. |
 | `words` | `true`, `false` | Include word timings and confidence. |
 | `punc` | `true`, `false` | Apply punctuation and casing recovery for supported languages. |

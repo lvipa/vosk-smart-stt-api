@@ -61,6 +61,8 @@ TARGET_CH = 1      # mono
 MODEL_REGISTRY = {
     "ru": {"small": "vosk-model-small-ru-0.22", "big": "vosk-model-ru-0.42"},
     "en": {"small": "vosk-model-small-en-us-0.15", "big": "vosk-model-en-us-0.22"},
+    "fr": {"small": "vosk-model-small-fr-0.22", "big": "vosk-model-fr-0.22"},
+    "kz": {"small": "vosk-model-small-kz-0.42", "big": "vosk-model-kz-0.42"},
 }
 
 # PUNC модели (текст -> текст с пунктуацией/регистром)
